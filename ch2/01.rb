@@ -5,11 +5,12 @@ class Parent
 end
 
 class Child < Parent
-  def hi
+  def hello
+    super
+
     puts 'Hello, Child class!'
   end
 end
 
 child = Child.new
 child.hello
-child.hi
