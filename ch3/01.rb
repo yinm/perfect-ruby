@@ -1,8 +1,10 @@
-stone = 'peridot'
+stone = 'ruby'
 
-case stone
-  when /ruby/ then puts '7月'
-  when /peridot|sardonyx/ then puts '8月'
-  else 'よくわかりません'
+case
+  when stone == 'ruby'
+    puts '7月'
+  when stone == 'peridot' || stone == 'sardonyx'
+    puts '8月'
+  else
+    puts 'よくわかりません'
 end
-
