@@ -1,8 +1,8 @@
-p val = 'Hello'
-
-if true
-  p 'Hello'
+class MyClass
+  def hello
+    puts 'Hello, My object!'
+  end
 end
 
-p val
-p 4423
+my_object = MyClass.new
+my_object.hello
