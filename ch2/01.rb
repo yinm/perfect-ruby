@@ -1,3 +1,4 @@
-name = 'alice'
+p %r{/usr/bin}
 
-p /hello, #{name}/
+pwd = Dir.pwd
+p %r(#{pwd}/.+)
