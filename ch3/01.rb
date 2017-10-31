@@ -1,10 +1,13 @@
 stone = 'ruby'
 
-case stone
-  when /ruby/
-    puts '7月'
-  when /peridot|sardonyx/
-    puts '8月'
-  else
-    puts 'よくわかりません'
-end
+detected =
+    case stone
+      when /ruby/
+        '7月'
+      when /peridot|sardonyx/
+        '8月'
+      else
+        'よくわかりません'
+    end
+
+puts detected
