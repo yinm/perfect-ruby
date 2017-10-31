@@ -1,6 +1,6 @@
-greeter = Proc.new {|name|
-  puts "Hello, #{name}!"
+format = Proc.new {|name|
+  name = name.capitalize
+  "Hello, #{name}!"
 }
 
-greeter.call 'Proc'
-greeter.call 'Ruby'
+p format.call('alice')
