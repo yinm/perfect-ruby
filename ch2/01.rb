@@ -1,16 +1,4 @@
-class Parent
-  def hello
-    puts 'Hello, Parent class!'
-  end
+class Whatever
 end
 
-class Child < Parent
-  def hello
-    super
-
-    puts 'Hello, Child class!'
-  end
-end
-
-child = Child.new
-child.hello
+p Whatever.superclass
