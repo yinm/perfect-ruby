@@ -1,5 +1,5 @@
-str = 'Ping'
-
-if str
-  puts str
+if false
+  puts 'Ping'
+else
+  puts 'Pong'
 end
