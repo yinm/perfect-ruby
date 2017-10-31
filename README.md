@@ -1,1 +1,1 @@
-# perfect-ruby
+[改訂2版 パーフェクトRuby](https://gihyo.jp/dp/ebook/2017/978-4-7741-9009-9)をやってます。
