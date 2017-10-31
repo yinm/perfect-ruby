@@ -1,2 +1,6 @@
-p %q{paren(and paren)}
-p %r{/usr/(bin|lib)/}
+greeter = Proc.new {|name|
+  puts "Hello, #{name}!"
+}
+
+greeter.call 'Proc'
+greeter.call 'Ruby'
