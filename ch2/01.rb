@@ -1,3 +1,4 @@
+# 2nd
 class MyClass
   def hello
     puts 'Hello, My object!'
