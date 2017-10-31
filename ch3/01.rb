@@ -1,4 +1,10 @@
-n = 1
+stone = 'ruby'
 
-puts '0でした' if n.zero?
-puts '0ではありませんでした' unless n.zero?
+case stone
+  when 'ruby'
+    puts '7月'
+  when 'peridot', 'sardonyx'
+    puts '8月'
+  else
+    puts 'よくわかりません'
+end
