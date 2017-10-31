@@ -1,3 +1,5 @@
-if true
-  puts 'Ping'
+str = 'Ping'
+
+if str
+  puts str
 end
