@@ -1,9 +1,13 @@
-# 2nd
-class MyClass
-  def hello
-    puts 'Hello, My object!'
+class Ruler
+  def length=(val)
+    @length = val
+  end
+
+  def length
+    @length
   end
 end
 
-my_object = MyClass.new
-my_object.hello
+ruler = Ruler.new
+ruler.length = 30
+p ruler.length
