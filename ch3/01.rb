@@ -1,12 +1,7 @@
-n = 2
+n = 1
 
-
-if n.zero?
-  puts '0でした'
-elsif n.even?
-  puts '偶数でした'
-elsif n.odd?
-  puts '奇数でした'
+unless n.zero?
+  puts '0ではありませんでした'
 else
-  puts 'わかりません'
+  puts '0でした'
 end
