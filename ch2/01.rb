@@ -1,11 +1,8 @@
-n = 2
+p val = 'Hello'
 
-if n.zero?
-  puts '0でした'
-elsif n.even?
-  puts '偶数でした'
-elsif n.odd?
-  puts '奇数でした'
-else
-  puts 'わかりません'
+if true
+  p 'Hello'
 end
+
+p val
+p 4423
