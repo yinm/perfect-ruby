@@ -1,4 +1,4 @@
-n = 1
+n = 0
 
-result = n.zero? ? '0でした' : '0ではありませんでした'
-puts result
+puts '0でした' if n.zero?
+puts '0ではありませんでした' unless n.zero?
