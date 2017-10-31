@@ -1,4 +1,2 @@
-p %r{/usr/bin}
-
-pwd = Dir.pwd
-p %r(#{pwd}/.+)
+p %q{paren(and paren)}
+p %r{/usr/(bin|lib)/}
