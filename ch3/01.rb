@@ -1,9 +1,9 @@
 stone = 'ruby'
 
 case stone
-  when 'ruby'
+  when /ruby/
     puts '7月'
-  when 'peridot', 'sardonyx'
+  when /peridot|sardonyx/
     puts '8月'
   else
     puts 'よくわかりません'
