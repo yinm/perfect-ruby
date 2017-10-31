@@ -1,4 +1,14 @@
-class Whatever
+module Brainfsck
+  class Parser
+    puts 'Brainfsck'
+  end
 end
 
-p Whatever.superclass
+module Whitespace
+  class Parser
+    puts 'Whitespace'
+  end
+end
+
+Brainfsck::Parser
+Whitespace::Parser
