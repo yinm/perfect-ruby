@@ -1,14 +1,11 @@
-module Brainfsck
-  class Parser
-    puts 'Brainfsck'
-  end
-end
+colors = {
+    'red' => 'ff0000',
+    'green' => '00ff00',
+    'blue' => '0000ff'
+}
 
-module Whitespace
-  class Parser
-    puts 'Whitespace'
-  end
-end
+p colors['blue']
+p colors['black']
 
-Brainfsck::Parser
-Whitespace::Parser
+colors['green'] = '008000'
+p colors
