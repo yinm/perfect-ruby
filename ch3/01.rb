@@ -1,7 +1,8 @@
-n = 1
+platform =
+    if /darwin/ =~ RUBY_PLATFORM
+      'Mac'
+    else
+      'Others'
+    end
 
-unless n.zero?
-  puts '0ではありませんでした'
-else
-  puts '0でした'
-end
+puts platform
