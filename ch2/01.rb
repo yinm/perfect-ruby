@@ -1,5 +1,7 @@
-abc = ('a'..'c')
+pattern = /[0-9]+/
 
-abc.each do |c|
-  puts c
-end
+p pattern === 'HAL 9000'
+p pattern === 'Space Odyssey'
+
+p pattern =~ 'HAL 9000'
+p pattern =~ 'Space Odyssey'
