@@ -1,15 +1,12 @@
-# 2nd
 class Ruler
-  def length=(val)
-    @length = val
-  end
+  attr_accessor :length
 
-  def length
-    @length
+  def display_length
+    puts length
   end
 end
 
 ruler = Ruler.new
-
 ruler.length = 30
-puts ruler.length
+
+ruler.display_length
