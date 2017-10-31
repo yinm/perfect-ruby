@@ -1,6 +1,2 @@
-colors = {
-    red: 'ff0000',
-    green: '00ff00',
-    blue: '0000ff'
-}
-p colors
+p (1..5).include?(5)
+p (1...5).include?(5)
