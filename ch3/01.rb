@@ -1,7 +1,5 @@
-class MyObject
-  def ==(other)
-    self.class == other.class
-  end
-end
+a = [1, 2, 3]
+b = [1, 2, 3]
 
-p MyObject.new == MyObject.new
+p a == b
+p a.equal?(b)
