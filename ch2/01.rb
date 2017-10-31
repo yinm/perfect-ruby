@@ -1,5 +1,7 @@
-c, d, e = [1, 2]
+a = 'a'
+b = 'b'
 
-p c
-p d
-p e
+b, a = a, b
+
+p a
+p b
