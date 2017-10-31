@@ -1,5 +1,12 @@
-a = [1, 2, 3]
-b = [1, 2, 3]
+n = 2
 
-p a == b
-p a.equal?(b)
+
+if n.zero?
+  puts '0でした'
+elsif n.even?
+  puts '偶数でした'
+elsif n.odd?
+  puts '奇数でした'
+else
+  puts 'わかりません'
+end
