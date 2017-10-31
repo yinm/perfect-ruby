@@ -1,3 +1,4 @@
+# 2nd
 class Ruler
   def length=(val)
     @length = val
@@ -9,5 +10,6 @@ class Ruler
 end
 
 ruler = Ruler.new
+
 ruler.length = 30
-p ruler.length
+puts ruler.length
