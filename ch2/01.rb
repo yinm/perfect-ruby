@@ -1,12 +1,10 @@
 class Ruler
   attr_accessor :length
 
-  def set_default_length
-    self.length = 30
+  def initialize(length)
+    @length = length
   end
 end
 
-ruler = Ruler.new
-ruler.set_default_length
-
+ruler = Ruler.new(30)
 puts ruler.length
