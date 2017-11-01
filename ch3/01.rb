@@ -1,5 +1,7 @@
-puts 'こんにちは。'
+DATA.each_line do |line|
+  puts line
+end
 
-return unless $0 == __FILE__
-
-puts 'このファイルは直接実行されたようです。'
+__END__
+いろはにほへと
+ちりぬるを
