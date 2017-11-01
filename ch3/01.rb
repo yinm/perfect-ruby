@@ -1,10 +1,5 @@
-languages = %w(Perl Python Ruby Smalltalk JavaScript)
+puts 'こんにちは。'
 
-languages.each do |language|
-  puts language
+return unless $0 == __FILE__
 
-  if language == 'Ruby'
-    puts 'I found Ruby!!'
-    redo
-  end
-end
+puts 'このファイルは直接実行されたようです。'
