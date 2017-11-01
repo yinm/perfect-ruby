@@ -1,13 +1,9 @@
-def jump_state
-  languages = %w(Perl Python Ruby Smalltalk JavaScript)
-  languages.each do |language|
-    puts language
+languages = %w(Perl Python Ruby Smalltalk JavaScript)
 
-    if language == 'Ruby'
-      puts 'I found Ruby!'
-      break 'I found Ruby!'
-    end
-  end
+languages.each do |language|
+  puts language
+
+  next unless language == 'Ruby'
+
+  puts 'I found Ruby!!'
 end
-
-p jump_state
