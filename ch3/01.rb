@@ -1,7 +1,7 @@
 languages = %w(Perl Python Ruby)
-i = 0
+i = languages.length - 1
 
-while i < languages.length
-  puts "Hello, #{languages[i]}."
-  i += 1
+until i < 0
+  puts "Hello, #{languages[i]}"
+  i -= 1
 end
