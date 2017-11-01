@@ -1,10 +1,7 @@
-stone = 'ruby'
+languages = %w(Perl Python Ruby)
+i = 0
 
-case
-  when stone == 'ruby'
-    puts '7月'
-  when stone == 'peridot' || stone == 'sardonyx'
-    puts '8月'
-  else
-    puts 'よくわかりません'
+while i < languages.length
+  puts "Hello, #{languages[i]}."
+  i += 1
 end
