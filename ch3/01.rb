@@ -1,3 +1,3 @@
-loop do
-  puts 'infinity loop!'
+2.times do
+  puts 'こんにちは！'
 end
