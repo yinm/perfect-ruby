@@ -1,6 +1,7 @@
-for val in {a: 1, b: 2}
-  puts val[0]
-  puts val[1]
+for key, val in {a: 1, b: 2}
+  puts key
+  puts val
 end
 
+p key
 p val
