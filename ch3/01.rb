@@ -1,5 +1,6 @@
-for name in %w(Alice Bob Carol)
-  puts name
+for val in {a: 1, b: 2}
+  puts val[0]
+  puts val[1]
 end
 
-puts name
+p val
