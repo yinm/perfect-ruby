@@ -1,7 +1,3 @@
-for key, val in {a: 1, b: 2}
-  puts key
-  puts val
+loop do
+  puts 'infinity loop!'
 end
-
-p key
-p val
