@@ -1,3 +1,8 @@
-p catch(:foo) {
-  throw :foo, 'returned value'
-}
+sweet = 'honey'
+
+def sweet
+  'salt'
+end
+
+p sweet
+p sweet()
