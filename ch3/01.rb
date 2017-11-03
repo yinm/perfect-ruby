@@ -1,11 +1,15 @@
-def with_current_time
-  yield Time.now
+def default_argument_for_block
+  yield
 end
 
-with_current_time do
-  puts 'Hi'
+default_argument_for_block do |val = 'Hi'|
+  puts val
 end
 
-with_current_time do |now, something|
-  puts something.inspect
+def flexible_arguments_for_block
+  yield 1, 2, 3
+end
+
+flexible_arguments_for_block do |*params|
+  puts params.inspect
 end
