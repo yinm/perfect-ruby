@@ -1,7 +1,7 @@
 def greet(name, message = 'Hi')
-  puts "#{message}, #{name}"
+  puts "#{message}, #{name}."
 end
 
-greet 'Ruby'
-greet 'Ruby', 'Hello'
-greet 'Ruby', nil
+greet('Ruby')
+greet('Ruby', 'Hello')
+greet('Ruby', nil)
