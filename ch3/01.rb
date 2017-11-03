@@ -1,11 +1,10 @@
 begin
-  failed ||= 0
-  puts 'trying...'
-  puts "retry count #{failed}"
-
-  raise
-rescue
-  failed += 1
-
-  retry if failed < 5
+  begin
+    raise 'original error'
+  rescue => e1
+    raise 'another error'
+  end
+rescue => e2
+  p e2
+  p e2.cause
 end
