@@ -1,5 +1,4 @@
-p1 = Proc.new {|val| val.upcase}
-p2 = :upcase.to_proc
+people = %w(Alice Bob Carol)
 
-p p1.call('hi')
-p p2.call('hi')
+people.map {|person| person.upcase}
+p people
