@@ -1,13 +1,6 @@
-def write_with_lock
-  File.open 'time.txt', 'w' do |f|
-    f.flock File::LOCK_EX
-
-    yield f
-
-    f.flock File::LOCK_UN
-  end
+%w(Alice Bob Charlie).each do |person|
+  someone = 'block local'
 end
 
-write_with_lock do |f|
-  f.puts Time.now
-end
+p someone
+p person
