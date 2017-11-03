@@ -1,13 +1,7 @@
-def block_sample
-  puts 'stand up'
+file = File.open('without_block.txt', 'w')
+file.puts 'without block'
+file.close
 
-  yield if block_given?
-
-  puts 'sit down'
-end
-
-block_sample
-
-block_sample do
-  puts 'walk'
+File.open 'with_block.txt', 'w' do |file|
+  file.puts 'with block'
 end
