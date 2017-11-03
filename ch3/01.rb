@@ -1,4 +1,5 @@
-people = %w(Alice Bob Charlie)
-block = Proc.new {|name| puts name}
+p1 = Proc.new {|val| val.upcase}
+p2 = :upcase.to_proc
 
-people.each &block
+p p1.call('hi')
+p p2.call('hi')
