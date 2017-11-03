@@ -1,5 +1,8 @@
-def call
-  'called'
+def greet(recipient)
+  return false unless recipient
+
+  "Hi, #{recipient.capitalize}."
 end
 
-p call
+p greet('alice')
+p greet(nil)
