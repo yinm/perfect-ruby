@@ -1,8 +1,7 @@
-def greet(recipient)
-  return false unless recipient
-
-  "Hi, #{recipient.capitalize}."
+def greet(name, message = 'Hi')
+  puts "#{message}, #{name}"
 end
 
-p greet('alice')
-p greet(nil)
+greet 'Ruby'
+greet 'Ruby', 'Hello'
+greet 'Ruby', nil
