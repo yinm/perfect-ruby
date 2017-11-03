@@ -1,7 +1,5 @@
-def greet(name, *messages)
-  messages.each do |message|
-    puts "#{message}, #{name}."
-  end
+def greet(name, *)
+  puts "Hello, #{name}"
 end
 
-greet('Ruby', 'Hello', 'こんにちは')
+greet('Ruby', 'こんにちは', 'foo')
