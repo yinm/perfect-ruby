@@ -1,7 +1,7 @@
-def display_value
-  puts yield
+def with_current_time
+  yield Time.now
 end
 
-display_value do
-  break 42
+with_current_time do |now|
+  puts now.year
 end
