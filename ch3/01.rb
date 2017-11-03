@@ -1,5 +1,8 @@
-def greet(name, *)
-  puts "Hello, #{name}"
+def greet_twice(name, first_message, second_message)
+  puts "#{first_message}, #{name}."
+  puts "#{second_message}, #{name}."
 end
 
-greet('Ruby', 'こんにちは', 'foo')
+greetings = %w(Hello Hola)
+
+greet_twice('Ruby', *greetings)
