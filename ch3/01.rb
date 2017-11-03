@@ -3,5 +3,5 @@ def display_value
 end
 
 display_value do
-  next 42
+  break 42
 end
