@@ -1,6 +1,7 @@
+people = []
+
 %w(Alice Bob Charlie).each do |person|
-  someone = 'block local'
+  people << person
 end
 
-p someone
-p person
+p people
