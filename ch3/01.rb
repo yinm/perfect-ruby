@@ -1,4 +1,13 @@
-people = %w(Alice Bob Carol)
+def write_with_lock
+  File.open 'time.txt', 'w' do |f|
+    f.flock File::LOCK_EX
 
-people.map(&:upcase)
-p people
+    yield f
+
+    f.flock File::LOCK_UN
+  end
+end
+
+write_with_lock do |f|
+  f.puts Time.now
+end
