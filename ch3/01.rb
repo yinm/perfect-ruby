@@ -1,7 +1,7 @@
-file = File.open('without_block.txt', 'w')
-file.puts 'without block'
-file.close
+def display_value
+  puts yield
+end
 
-File.open 'with_block.txt', 'w' do |file|
-  file.puts 'with block'
+display_value do
+  4423
 end
