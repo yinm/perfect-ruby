@@ -1,7 +1,9 @@
+someone = 'Dave'
 people = []
 
-%w(Alice Bob Charlie).each do |person|
-  people << person
+%w(Alice Bob Charlie).each do |someone|
+  people << someone
 end
 
 p people
+p someone
