@@ -1,10 +1,15 @@
-begin
-  begin
-    raise 'original error'
-  rescue => e1
-    raise 'another error'
+catch :triple_loop do
+  loop do
+    puts 'one'
+
+    loop do
+      puts 'two'
+
+      loop do
+        puts 'three'
+
+        throw :triple_loop
+      end
+    end
   end
-rescue => e2
-  p e2
-  p e2.cause
 end
