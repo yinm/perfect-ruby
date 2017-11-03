@@ -1,5 +1,5 @@
-def Hello
-  puts 'Hello, My method!'
+def call
+  'called'
 end
 
-Hello()
+p call
