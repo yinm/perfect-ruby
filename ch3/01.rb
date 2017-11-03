@@ -1,7 +1,5 @@
-DATA.each_line do |line|
-  puts line
+begin
+  raise StandardError
+rescue => e
+  puts "Error occurred (#{e.class}"
 end
-
-__END__
-いろはにほへと
-ちりぬるを
