@@ -1,13 +1,13 @@
 def block_sample
   puts 'stand up'
 
-  yield
+  yield if block_given?
 
   puts 'sit down'
 end
 
+block_sample
+
 block_sample do
   puts 'walk'
-  puts 'foo'
-  puts 'bar'
 end
