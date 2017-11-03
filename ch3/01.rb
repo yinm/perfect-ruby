@@ -1,4 +1,4 @@
 people = %w(Alice Bob Carol)
 
-people.map {|person| person.upcase}
+people.map(&:upcase)
 p people
