@@ -1,8 +1,11 @@
-begin
-  file = File.open('whatever.txt')
+returned =
+    begin
+      value = 'return value'
+      raise
+    rescue
+      value
+    ensure
+      'this is not return value'
+    end
 
-rescue
-  puts '何かがおきました'
-ensure
-  file.close if file
-end
+puts returned
