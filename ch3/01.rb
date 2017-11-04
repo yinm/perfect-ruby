@@ -1,1 +1,6 @@
-system('echo `pwd`', chdir: '/tmp')
+trap :INT do
+  puts "\nInterrupted!"
+  exit
+end
+
+sleep
