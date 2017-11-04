@@ -1,2 +1,2 @@
-exec 'uname'
-puts 'hello' # 実行されない
+pid = spawn('uname')
+Process.waitpid pid
