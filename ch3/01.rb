@@ -1,18 +1,7 @@
-class Ruler
-  def initialize(length)
-    @length = length
-  end
+print '足される数: '
+a = Integer(gets)
 
-  def to_s
-    '=' * @length
-  end
+print '足す数: '
+b = Integer(gets)
 
-  def inspect
-    "Ruler(length: #{@length})"
-  end
-end
-
-ruler = Ruler.new(30)
-
-puts ruler
-p ruler
+puts "合計： #{a + b}"
