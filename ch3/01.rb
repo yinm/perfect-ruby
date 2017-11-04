@@ -1,6 +1,5 @@
-trap :INT do
-  puts "\nInterrupted!"
-  exit
+trap :EXIT do
+  puts 'Finalizing...'
 end
 
-sleep
+puts 'Running...'
