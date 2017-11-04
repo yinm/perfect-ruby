@@ -1,7 +1,3 @@
-alias greet puts
-
-greet 'hi'
-
-undef puts
-
-greet 'ho'
+puts 1
+puts "Hi\n"
+puts 'Alice', 'Bob'
