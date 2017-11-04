@@ -1,5 +1,1 @@
-trap :EXIT do
-  puts 'Finalizing...'
-end
-
-puts 'Running...'
+eval "puts 1 + 2"
