@@ -1,5 +1,5 @@
-def keywords(alice:, bob:)
-  {alice: alice, bob: bob}
+def keywords(hash = {})
+  hash
 end
 
-p keywords(alice: 'アリス')
+p keywords(alice: 'アリス', bob: 'ボブ')
