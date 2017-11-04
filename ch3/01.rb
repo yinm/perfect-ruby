@@ -1,11 +1,3 @@
-def greet
-  puts 'hola'
-end
+alias greet puts
 
-greet
-puts 'hi'
-
-undef greet, puts
-
-greet
-puts 'hi'
+greet 'hi'
