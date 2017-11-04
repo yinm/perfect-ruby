@@ -1,6 +1,5 @@
-def keywords(alice: nil, bob: nil)
+def keywords(alice:, bob:)
   {alice: alice, bob: bob}
 end
 
-p keywords(alice: 'アリス', bob: 'ボブ')
-p keywords(charlie: 'チャーリー')
+p keywords(alice: 'アリス')
