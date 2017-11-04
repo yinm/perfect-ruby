@@ -1,4 +1,2 @@
-num = 1
-p `head -#{num} ~/.vimrc`
-
-p $?
+exec 'uname'
+puts 'hello' # 実行されない
