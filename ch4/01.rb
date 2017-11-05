@@ -1,7 +1,8 @@
-str = 'abc'
+class Ruler
+  attr_accessor :length
+end
 
-p str.reverse
-p str
-
-p str.reverse!
-p str
+ruler = Ruler.new
+p ruler.length
+p ruler.length = 30
+p ruler.length
