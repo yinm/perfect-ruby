@@ -1,5 +1,8 @@
 class MyClass
-  DEFAULT_VALUE = 4423
+  def initialize
+    puts 'Initializing...'
+  end
 end
 
-p MyClass::DEFAULT_VALUE
+my_object = MyClass.new
+p my_object
