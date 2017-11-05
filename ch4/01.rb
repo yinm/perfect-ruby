@@ -1,18 +1,14 @@
 class Processor
-  def process
-    protected_process
+  def process(other)
+    other.protected_process
   end
 
   def protected_process
-    private_process
+    puts 'Called'
   end
   protected :protected_process
-
-  def private_process
-    puts 'done!'
-  end
-  private :private_process
 end
 
 processor = Processor.new
-processor.process
+processor.process(Processor.new)
+processor.protected_process
