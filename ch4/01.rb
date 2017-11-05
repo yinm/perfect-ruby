@@ -1,9 +1,13 @@
 VALUE = 'toplevel'
 
 class Foo
-  def self.value
-    VALUE
+  VALUE = 'in Foo class'
+
+  class Bar
+    def self.value
+      VALUE
+    end
   end
 end
 
-p Foo.value
+p Foo::Bar.value
