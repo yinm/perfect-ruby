@@ -1,22 +1,12 @@
-class Parent
-  def greet
-    puts 'Hi'
-  end
+class Foo
 end
 
-class Child < Parent
-  def greet(name)
-    puts "Hi #{name}"
-  end
+foo = Foo.new
+bar = Foo.new
+
+def bar.sole_method
+  puts 'Called!'
 end
 
-class GrandChild < Child
-  def greet(name)
-    super
-
-    puts 'Nice to meet you!'
-  end
-end
-
-grand_child = GrandChild.new
-grand_child.greet('ruby')
+bar.sole_method
+foo.sole_method
