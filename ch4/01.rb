@@ -1,12 +1,11 @@
 class Parent
-  def greet
-    puts 'Hi'
+  def initialize
+    @ivar = 'content'
   end
 end
 
 class Child < Parent
 end
 
-p Child.superclass
-child = Child.new
-child.greet
+p Parent.new
+p Child.new
