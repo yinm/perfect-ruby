@@ -1,17 +1,7 @@
-class Parent
-  @@val = 'foo'
-
-  def self.say
-    puts @@val
+class My
+  class SweetClass
   end
 end
 
-class Child < Parent
-  def say
-    puts @@val
-  end
-end
-
-Parent.say
-Child.say
-Child.new.say
+p My.new
+p My::SweetClass.new
