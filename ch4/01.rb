@@ -10,9 +10,13 @@ class Child < Parent
   end
 end
 
-parent = Parent.new
-parent.greet
+class GrandChild < Child
+  def greet(name)
+    super
 
-child = Child.new
-child.greet('ruby')
-child.greet
+    puts 'Nice to meet you!'
+  end
+end
+
+grand_child = GrandChild.new
+grand_child.greet('ruby')
