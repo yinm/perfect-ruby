@@ -2,12 +2,12 @@ VALUE = 'toplevel'
 
 class Foo
   VALUE = 'in Foo class'
-end
 
-class Foo::Baz
-  def self.value
-    VALUE
+  class Bar
+    def self.value
+      ::VALUE
+    end
   end
 end
 
-p Foo::Baz.value
+p Foo::Bar.value
