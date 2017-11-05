@@ -1,8 +1,13 @@
 class MyClass
-  def initialize
-    puts 'Initializing...'
+  def method_a
+    puts 'method_a called'
+  end
+
+  def method_b
+    method_a
   end
 end
 
 my_object = MyClass.new
-p my_object
+my_object.method_a
+my_object.method_b
