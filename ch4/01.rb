@@ -1,13 +1,17 @@
-class Foo
-  def override_me
-    puts 'in Foo Class'
+class Parent
+  @@val = 'foo'
+
+  def self.say
+    puts @@val
   end
 end
 
-bar = Foo.new
-def bar.override_me
-  super
-  puts 'in singleton method'
+class Child < Parent
+  def say
+    puts @@val
+  end
 end
 
-bar.override_me
+Parent.say
+Child.say
+Child.new.say
