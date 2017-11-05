@@ -1,14 +1,12 @@
-class Processor
-  def process(other)
-    other.protected_process
+class Parent
+  def greet
+    puts 'Hi'
   end
-
-  def protected_process
-    puts 'Called'
-  end
-  protected :protected_process
 end
 
-processor = Processor.new
-processor.process(Processor.new)
-processor.protected_process
+class Child < Parent
+end
+
+p Child.superclass
+child = Child.new
+child.greet
