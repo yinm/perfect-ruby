@@ -1,16 +1,18 @@
 class Parent
-  PARENT = 'constant in parent'
+  def greet
+    puts 'Hi'
+  end
 end
 
 class Child < Parent
+  def greet(name)
+    puts "Hi #{name}"
+  end
 end
 
-p Child.constants
-p Child::PARENT
+parent = Parent.new
+parent.greet
 
-class GrandChild < Child
-  PARENT = 'constant in grand child'
-end
-
-p GrandChild.constants
-p GrandChild::PARENT
+child = Child.new
+child.greet('ruby')
+child.greet
