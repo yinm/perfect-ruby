@@ -1,15 +1,9 @@
-class Rectangle
-  attr_accessor :width, :height
+class Ruler
+  attr_accessor :length
+
+  def self.pair
+    [new, new]
+  end
 end
 
-rectangle = Rectangle.new
-p rectangle.width
-p rectangle.height
-
-p rectangle.width = 10;
-p rectangle.width
-p rectangle.height
-
-p rectangle.height = 10;
-p rectangle.width
-p rectangle.height
+p Ruler.pair
