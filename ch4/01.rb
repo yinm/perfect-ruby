@@ -1,13 +1,19 @@
-class MyClass
-  def method_a
-    puts 'method_a called'
+class Brownie
+  def initialize
+    @baked = false
   end
 
-  def method_b
-    method_a
+  def bake!
+    @baked = true
+    self
+  end
+
+  def baked?
+    @baked
   end
 end
 
-my_object = MyClass.new
-my_object.method_a
-my_object.method_b
+p b = Brownie.new
+p b.baked?
+p b.bake!
+p b.baked?
