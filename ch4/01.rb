@@ -1,19 +1,7 @@
-class Brownie
-  def initialize
-    @baked = false
-  end
+str = 'abc'
 
-  def bake!
-    @baked = true
-    self
-  end
+p str.reverse
+p str
 
-  def baked?
-    @baked
-  end
-end
-
-p b = Brownie.new
-p b.baked?
-p b.bake!
-p b.baked?
+p str.reverse!
+p str
