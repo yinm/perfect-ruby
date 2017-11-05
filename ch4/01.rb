@@ -1,7 +1,11 @@
-class My
-  class SweetClass
+VALUE = 'toplevel'
+
+class Foo
+  VALUE = 'in Foo class'
+
+  def self.value
+    VALUE
   end
 end
 
-p My.new
-p My::SweetClass.new
+p Foo.value
