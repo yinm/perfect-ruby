@@ -1,11 +1,9 @@
 class Parent
-  def initialize
-    @ivar = 'content'
-  end
+  PARENT = 'content in parent'
 end
 
 class Child < Parent
 end
 
-p Parent.new
-p Child.new
+p Child.constants
+p Child::PARENT
