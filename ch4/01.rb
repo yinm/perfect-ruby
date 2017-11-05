@@ -1,12 +1,13 @@
 class Foo
+  def override_me
+    puts 'in Foo Class'
+  end
 end
 
-foo = Foo.new
 bar = Foo.new
-
-def bar.sole_method
-  puts 'Called!'
+def bar.override_me
+  super
+  puts 'in singleton method'
 end
 
-bar.sole_method
-foo.sole_method
+bar.override_me
