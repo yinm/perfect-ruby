@@ -1,8 +1,15 @@
-class Ruler
-  attr_accessor :length
+class Rectangle
+  attr_accessor :width, :height
 end
 
-ruler = Ruler.new
-p ruler.length
-p ruler.length = 30
-p ruler.length
+rectangle = Rectangle.new
+p rectangle.width
+p rectangle.height
+
+p rectangle.width = 10;
+p rectangle.width
+p rectangle.height
+
+p rectangle.height = 10;
+p rectangle.width
+p rectangle.height
