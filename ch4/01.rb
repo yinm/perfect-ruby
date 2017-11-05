@@ -1,8 +1,8 @@
-class Parent
-  PARENT = 'content in parent'
+class Parent2
+  PARENT = 'constant in parent'
 end
 
-class Child < Parent
+class Child < Parent2
 end
 
 p Child.constants
