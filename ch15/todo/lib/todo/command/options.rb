@@ -6,22 +6,8 @@ module Todo
       def self.parse!(argv)
         options = {}
 
-        sub_command_parsers = Hash.new do |k, v|
-          raise ArgumentError, "'#{v}' is not todo sub command."
-        end
-
-        sub_command_parsers['create'] = OptionParser.new do |opt|
-          opt.on('-n VAL', '--name=VAL', 'task name') { |v| options[:name] = v }
-          opt.on('-c VAL', '--content=VAL', 'task content') { |v| options[:content] = v }
-        end
-
-        command_parser = OptionParser.new do |opt|
-          opt.on_head('-v', '--version', 'Show program version') do |v|
-            opt.version = Todo::VERSION
-            puts opt.ver
-            exit
-          end
-        end
+        sub_command_parsers = create_sub_command_parser(options)
+        command_parser = create_command_parser
 
         begin
           command_parser.order!(argv)
@@ -33,7 +19,30 @@ module Todo
 
         options
       end
-    end
 
+      def self.create_sub_command_parser(options)
+        sub_command_parsers = Hash.new do |k, v|
+          raise ArgumentError, "'#{v}' is not todo sub command."
+        end
+
+        sub_command_parsers['create'] = OptionParser.new do |opt|
+          opt.on('-n VAL', '--name=VAL', 'task name') { |v| options[:name] = v }
+          opt.on('-c VAL', '--content=VAL', 'task content') { |v| options[:content] = v }
+        end
+
+        sub_command_parsers
+      end
+
+      def self.create_command_parser
+        OptionParser.new do |opt|
+          opt.on_head('-v', '--version', 'Show program version') do |v|
+            opt.version = Todo::VERSION
+            puts opt.ver
+            exit
+          end
+        end
+      end
+
+    end
   end
 end
