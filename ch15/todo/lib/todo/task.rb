@@ -2,6 +2,8 @@ require 'active_record'
 
 module Todo
   class Task < ActiveRecord::Base
+    scope :status_is, ->(status) { where(status: status) }
+
     NOT_YET = 0
     DONE = 1
     PENDING = 2
