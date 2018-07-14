@@ -1,5 +1,13 @@
 module Todo
   class Command
+    def self.run(argv)
+      new(argv).execute
+    end
+
+    def initialize(argv)
+      @argv = argv
+    end
+
     def execute
       DB.prepare
     end
