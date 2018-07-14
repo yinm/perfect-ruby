@@ -54,6 +54,25 @@ module Todo
 
       def self.create_command_parser
         OptionParser.new do |opt|
+          sub_command_help = [
+            {name: 'create -n name -c content', summary: 'Create Todo Task'},
+            {name: 'update id -n name -c content, -s status', summary: 'Update Todo Task'},
+            {name: 'list -s status', summary: 'List Todo Tasks'},
+            {name: 'delete id', summary: 'Delete Todo Task'},
+          ]
+
+          opt.banner = "Usage: #{opt.program_name} [-h|--help] [-v|--version] <command> [<args>]"
+          opt.separator ''
+          opt.separator "#{opt.program_name} Available Commands:"
+          sub_command_help.each do |command|
+            opt.separator [opt.summary_indent, command[:name].ljust(40), command[:summary]].join(' ')
+          end
+
+          opt.on_head('-h', '--help', 'Show this message') do |v|
+            puts opt.help
+            exit
+          end
+
           opt.on_head('-v', '--version', 'Show program version') do |v|
             opt.version = Todo::VERSION
             puts opt.ver
