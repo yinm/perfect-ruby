@@ -75,7 +75,19 @@ module Todo
     end
 
     def display_format(id, name, content, status)
-      [id.to_s.rjust(4), name.ljust(20), content.ljust(38), status.ljust(8)].join(' | ')
+      name_length = 20 - full_width_count(name)
+      content_length = 40 - full_width_count(content)
+
+      [
+        id.to_s.rjust(4),
+        name.ljust(name_length),
+        content.ljust(content_length),
+        status.center(10)
+      ].join(' | ')
+    end
+
+    def full_width_count(string)
+      string.each_char.select{ |char| !(/[ -~｡-ﾟ]/.match(char)) }.count
     end
   end
 end
