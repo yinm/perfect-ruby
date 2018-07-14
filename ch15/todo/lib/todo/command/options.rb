@@ -32,21 +32,29 @@ module Todo
         end
 
         sub_command_parsers['create'] = OptionParser.new do |opt|
+          opt.banner = 'Usage: create <args>'
           opt.on('-n VAL', '--name=VAL', 'task name') { |v| options[:name] = v }
           opt.on('-c VAL', '--content=VAL', 'task content') { |v| options[:content] = v }
+          opt.on_tail('-h', '--help', 'Show this message') { |v| help_sub_command(opt) }
         end
 
         sub_command_parsers['list'] = OptionParser.new do |opt|
+          opt.banner = 'Usage: list <args>'
           opt.on('-s VAL', '--status=VAL', 'list status') { |v| options[:status] = v }
+          opt.on_tail('-h', '--help', 'Show this message') { |v| help_sub_command(opt) }
         end
 
         sub_command_parsers['update'] = OptionParser.new do |opt|
+          opt.banner = 'Usage: update id <args>'
           opt.on('-n VAL', '--name=VAL', 'update name') { |v| options[:name] = v }
           opt.on('-c VAL', '--content=VAL', 'update content') { |v| options[:content] = v }
           opt.on('-s VAL', '--status=VAL', 'update status') { |v| options[:status] = v }
+          opt.on_tail('-h', '--help', 'Show this message') { |v| help_sub_command(opt) }
         end
 
         sub_command_parsers['delete'] = OptionParser.new do |opt|
+          opt.banner = 'Usage: delete id'
+          opt.on_tail('-h', '--help', 'Show this massage') { |v| help_sub_command(opt) }
         end
 
         sub_command_parsers
@@ -79,6 +87,11 @@ module Todo
             exit
           end
         end
+      end
+
+      def self.help_sub_command(parser)
+        puts parser.help
+        exit
       end
 
     end
