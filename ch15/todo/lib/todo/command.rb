@@ -25,7 +25,7 @@ module Todo
         find_tasks(options[:status])
       end
 
-      p tasks
+      display_tasks tasks
 
     rescue => e
       abort "Error: #{e.message}"
@@ -60,6 +60,22 @@ module Todo
     def delete_task(id)
       task = Task.find(id)
       task.destroy
+    end
+
+    private
+
+    def display_tasks(tasks)
+      header = display_format('ID', 'Name', 'Content', 'Status')
+
+      puts header
+      puts '-' * header.size
+      Array(tasks).each do |task|
+        puts display_format(task.id, task.name, task.content, task.status_name)
+      end
+    end
+
+    def display_format(id, name, content, status)
+      [id.to_s.rjust(4), name.ljust(20), content.ljust(38), status.ljust(8)].join(' | ')
     end
   end
 end
